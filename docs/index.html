@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<title>阅之国“哇牛叉”学院日常</title>
+    <meta name="keywords" content="阅文集团,YUX,体验设计部,阅文前端,阅文设计,前端开发,团队建设,学院日常">
+    <meta name="description" content="阅文集团YUX体验设计部精彩生活，精彩日常，团队成员风采展示。欢迎加入阅文集团YUX体验设计部。">
+	<link rel="shortcut icon" href="https://yued-fe.github.io/story/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://qidian.gtimg.com/lulu/theme/modern/css/common/ui.css">
+	<link rel="stylesheet" href="https://qidian.gtimg.com/lulu/theme/modern/css/common/common.css">
+	<style>
+	body{min-width: inherit;}
+	.icon-loading{position: absolute;width:20px; height: 20px; background: url(https://qidian.gtimg.com/lulu/theme/modern/css/common/ui/images/Pagination/icon-loading.gif) no-repeat center;
+		visibility: hidden; margin-left: 10px;}
+	.loading .icon-loading{visibility: visible;}
+	article { font-size: 16px; margin: 30px; }
+	article h1 { margin: 20px 0; font-size: 28px; }
+	article h2 { margin: 30px 0 20px; font-size: 24px; }
+	article h3 { margin: 30px 0 20px; font-size: 22px; }
+	article h4 { margin: 1.5em 0 1em; font-size: 20px; }
+	article h5 { margin: 1.5em 0 1em; font-weight: bold; }
+	article code { border: 1px solid #EAEAEA; background-color: #fff; border-radius: 3px; padding: 0 4px; margin-left: 2px; margin-right: 2px; font-family: Consolas, monospace; }
+	article pre { padding: 10px 1em; margin: 1em 0; border: 1px dashed #ccc; background-color: #fff; font-family: Consolas, monospace; white-space: pre-wrap; word-wrap: break-word;}
+	article p { margin: 1em 0; }
+	article > ol { padding-left: 22px; list-style-type: decimal; }
+	article > ul { padding-left: 22px; list-style-type: disc; }
+	article > ul li, article > ol li { margin: .5em 0; }
+
+	blockquote {
+		background-color:  #fff;
+		padding: 1em;
+		margin-left:  0;
+	}
+	blockquote p { margin: .5em 0; }
+	.backtop { position: fixed; right: 10px; bottom: 10px; background-color: rgba(0,0,0,.5); color:#fff; width: 40px; height: 40px; border-radius: 50%; text-align: center; border: 10px solid transparent; display: none; transition: background-color .15s }
+	.backtop:hover{background-color: rgba(0,0,0,.65);color:#fff;}
+
+	img[data-src] {
+		display: inline-block;
+		text-indent: -999px;
+		background-color: #fff;
+	}
+    .beian {
+        margin: 20px 30px 20px;
+    }
+	.beian + .beian {
+	    margin-top: -15px;
+	}
+    hr {border: 0; border-top: 1px solid rgba(0,0,0,.1);}
+    .vh, .vh ~ .beian{visibility: hidden;}
+	article p > img {
+		margin: 0 0 5px 0;
+	}
+    :root .main > aside {
+        display: block;
+    }
+    @media screen and (max-width: 480px) {
+        .main aside {
+            width: auto;
+            position: absolute;
+            left: 0; right: 0; top: 62px;
+            padding-bottom: 0; margin-bottom: 0;
+            box-shadow: 0 999px 0 999px #fff;
+        }
+        .aside_dl {
+            columns: 2;
+        }
+        :root .main > aside {
+            display: none;
+        }
+        .header_icon_menu {
+            position: absolute;
+            right: 10px; top: 20px;
+            width: 30px; height: 3px;
+            padding: 6px 0;
+            border-top: 3px solid;
+            border-bottom: 3px solid;
+            background-color: currentColor;
+            background-clip: content-box;
+            color: #fff;
+        }
+        .header_icon_menu:hover {
+            color: #fff;
+        }
+        .header_icon_menu.active {
+            color: transparent;
+        }
+        .header_icon_menu.active::before,
+        .header_icon_menu.active::after {
+            content: '';
+            border-top: 3px solid #fff;
+            width: inherit;
+            position: absolute;
+            top: 50%; margin-top: -2px;
+            transform: rotate(45deg);
+        }
+        .header_icon_menu.active::after {
+            transform: rotate(-45deg);
+        }
+
+        article {
+            margin: 16px;
+        }
+        .beian {
+            margin: 10px 16px 10px;
+        }
+        article p > img,
+        article p > video,
+        article iframe {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        article iframe[src*="v.qq"] {
+            height: calc(0.5656 * (100vw  - 32px));
+        }
+    }
+    @media screen and (min-width: 480px) {
+        .aside_dt {
+            transition: color .2s;
+            cursor: pointer;
+        }
+        .aside_dt:hover {
+            color: #666;
+        }
+        .aside_dt:after {
+            content: '';
+            position: absolute;
+            border: 5px solid transparent;
+            border-top-color: currentColor;
+            margin: 10px 0 0 8px;
+            transform: rotate(-90deg);
+        }
+        .aside_dt[open]:after {
+            transform: rotate(0);
+            margin-top: 13px;
+            margin-left: 5px;
+        }
+        .aside_dd {
+            display: none;
+        }
+        .aside_dt[open] ~ .aside_dd {
+            display: block;
+        }
+    }
+	</style>
+</head>
+<body>
+
+<header>
+	<a href="./" class="header_l"><h1 class="logo">阅文集团</h1></a>
+    <a href="javascript:" id="headerMenu" class="header_icon_menu"></a>
+</header>
+<div class="main">
+    <!-- 侧边栏 -->
+    <!-- 侧边栏 -->
+    <aside id="aside"></aside>
+    <!-- 主内容 -->
+    <section>
+    	<article id="article">
+    		<div class="ui-loading" style="height:400px;"><span class="ui-loading-icon"></span></div>
+    	</article>
+        <hr class="vh">
+        <p class="beian"><a href="http://www.miitbeian.gov.cn" class="gray">沪ICP备14016804号-4</a></p>
+	<p class="beian"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502009124" class="gray">沪公网安备 31011502009124号</a></p>
+    </section>
+</div>
+<!-- 返回顶部 -->
+<a href="#" id="backtop" class="backtop">返回顶部</a>
+
+<script id="tplMenu" type="text/html">
+	<i class="aside_bg"></i>
+    <div class="aside_main">
+        {{each data as objData}}
+        <dl class="aside_dl">
+            <dt id="Y{{objData.year}}" class="aside_dt jsBar">{{objData.title}}</dt>
+            {{each objData.data as obj}}
+            <dd class="aside_dd"><a href="{{obj.url}}" id="{{obj.url.replace(/\D/g, '')}}" class="aside_nav jsNav"><i class="icon icon_nav_msg"></i>{{obj.menu}}<i class="icon-loading"></i></a></dd>
+            {{/each}}
+        </dl>
+        {{/each}}
+        <div class="aside_divide"></div>
+        <dl class="aside_dl">
+            <dd><a href="https://github.com/yued-fe/story" class="aside_nav" target="_blank"><i class="icon icon_nav_menu"></i>关于团队</a></dd>
+        </dl>
+    </div>
+</script>
+<script src="https://qidian.gtimg.com/lulu/theme/modern/js/plugin/jquery.js"></script>
+<script src="https://qidian.gtimg.com/yuewen/join/js/template.js"></script>
+<script>
+(function (win) {
+	var elAside = $('#aside'), elArticle = $('#article');
+
+	var cache = {};
+
+	var ACTIVE = 'active';
+
+	// 图片滚动加载
+	var elImages = elArticle.find('[data-src]');
+
+	elAside.delegate('.jsNav', 'click', function (event) {
+		event.preventDefault();
+
+		var elNav = $(this);
+
+		if (elNav.hasClass(ACTIVE)) {
+			return;
+		}
+		var url = elNav.attr('href');
+
+		var callback = function () {
+			elAside.find('.' + ACTIVE).removeClass(ACTIVE);
+			elNav.addClass(ACTIVE);
+            // 滚动加载对象改变
+			elImages = elArticle.find('[data-src]');
+            // 触发加载
+			$(win).trigger('scroll');
+            // 移动端
+            if (elHeaderMenu.width()) {
+                elHeaderMenu.removeClass('active');
+                elAside.hide();
+            }
+            // 浏览器hash变化
+            location.hash = '#&' + elNav.attr('id');
+            // 备案信息显示
+            $('hr').removeClass('vh');
+		};
+
+		if (cache[url]) {
+			elArticle.html(cache[url]);
+			callback();
+		} else {
+			elNav.addClass('loading');
+			$.ajax({
+				url: url,
+				success: function (html) {
+					// 1. 取<body>标签里面内容
+					html = html.replace(/[\w\W]*<body>([\w\W]*)<\/body>[\w\W]*/i, '$1');
+					// 2. 图片相对地址替换处理
+					html = html.replace(/\.\.\/images/g, './images');
+					// 刷新右侧内容
+					elArticle.html(html);
+
+					callback();
+				},
+				error: function () {
+					elArticle.html('<div style="line-height:400px; text-align: center;">网络异常，加载失败！</div>');
+				},
+				complete: function () {
+					elNav.removeClass('loading');
+				}
+			});
+		}
+	});
+
+    elAside.delegate('.jsBar', 'click', function () {
+        var attrOpen = $(this).attr('open');
+        if (typeof attrOpen == 'string') {
+            $(this).removeAttr('open');
+        } else {
+            $(this).attr('open', '');
+        }
+    });
+
+
+	// 左侧导航数据请求
+	$.getJSON('./menu.json', function (json) {
+        var daily = json.daily;
+        // 根据年份重新分组
+        // 否则太高，不好操作
+        var objMatch = {
+            '2017': '丁酉',
+            '2018': '戊戌',
+            '2019': '己亥',
+            '2020': '庚子',
+            '2021': '辛丑',
+            '2022': '壬寅',
+            '2023': '癸卯',
+            '2024': '甲辰',
+            '2025': '乙巳',
+            '2026': '丙午',
+            '2027': '丁未'
+        };
+
+        var arrData = [];
+        daily.forEach(function (obj) {
+            var year = obj.menu.split('年')[0];
+            // 是否当前年份已经有了
+            var isYearExist = false;
+            arrData.forEach(function (data) {
+                if (data.year == year) {
+                    data.data.push(obj);
+                    isYearExist = true;
+                }
+            });
+
+            if (isYearExist == false) {
+                arrData.push({
+                    year: year,
+                    title: year + objMatch[year] + '年',
+                    data: [obj]
+                });
+            }
+        });
+
+		elAside.html(template("tplMenu", {
+            data: arrData
+        }));
+
+        var elNavs = elAside.find('.jsNav');
+
+        // 展开与收起
+        var matchIndex = 0;
+        var hash = location.hash.replace(/\D/g, '');
+        if (hash) {
+            // 匹配的a
+            elNavs.each(function (index) {
+                if (hash == this.getAttribute('href').replace(/\D/g, '')) {
+                    matchIndex = index;
+                    return false;
+                }
+            });
+        }
+
+        // 拉取对应月份日常
+        elNavs.eq(matchIndex).trigger('click').parents('dl').find('dt').attr('open', '');
+        // 显示侧边栏
+        elAside.css({
+            visibility: 'visible'
+        });
+	});
+
+	// 索引定位
+	elArticle.delegate('a', 'click', function (event) {
+		var href = this.getAttribute('href');
+
+		if (/^#/.test(href)) {
+			$(win).scrollTop($(href).offset().top);
+			event.preventDefault();
+		}
+	});
+
+	// 返回顶部
+	var elBacktop = $('#backtop');
+
+	$(win).on('scroll', function () {
+		var st = $(win).scrollTop();
+		if (st > 0) {
+			elBacktop.show();
+		} else {
+			elBacktop.hide();
+		}
+
+		// 图片滚动加载
+		var winHeight = $(win).height();
+
+		elImages.each(function () {
+			var elImg = $(this);
+
+            // 图片等一些数据
+            var offsetImg = elImg.offset();
+
+            // 最终处理等地址
+            var src = elImg.attr('data-src');
+
+            // 水平或垂直任意一个在容器中即可
+            var posTopImg = offsetImg.top - st;
+            var posBottomImg = offsetImg.top + elImg.height();
+
+            // 垂直方向是否在区间
+            if ((posTopImg >= 0 && posTopImg < winHeight) || (posBottomImg > 0 && posBottomImg <= winHeight)) {
+                elImg.attr('src', src).on('load', function () {
+                    $(this).removeAttr('data-src');
+                });
+
+                if (elImg.is('video')) {
+                	elImg.removeAttr('data-src');
+                }
+            }
+		});
+	});
+	elBacktop.on('click', function (event) {
+		event.preventDefault();
+		$(win).scrollTop(0);
+	});
+
+    $(window).on('resize', function () {
+        $(this).trigger('scroll');
+
+        if (!elHeaderMenu.width()) {
+            elHeaderMenu.removeClass('active');
+            elAside.css('display', '');
+        }
+    });
+
+    // 移动端导航切换
+    var elHeaderMenu = $('#headerMenu').on('click', function () {
+        $(this).toggleClass('active');
+        elAside.toggle();
+    });
+})(window);
+</script>
+<!-- mta统计 -->
+<script>
+var _mtac = {};
+(function() {
+    var mta = document.createElement("script");
+    mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+    mta.setAttribute("name", "MTAH5");
+    mta.setAttribute("sid", "500671465");
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(mta, s);
+})();
+</script>
+</body>
+</html>
